@@ -1,5 +1,11 @@
 <div align="center">
 
+<img src="./assets/kirdev-banner.svg" width="100%" alt="KirDev animated banner" />
+
+</div>
+
+<div align="center">
+
 # 👋 Привет, я KirDev
 
 ### Android • Python • Telegram Bots • PC Tools
