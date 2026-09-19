@@ -1,0 +1,26 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+<style>
+  .bg { fill:#07110d; }
+  .grid { stroke:#1f6f4a; stroke-width:1; opacity:.22; }
+  .title { fill:#eafff3; font:700 72px monospace; letter-spacing:10px; }
+  .sub { fill:#71d99d; font:24px monospace; letter-spacing:3px; }
+  .glow { fill:#35d07f; opacity:.6; }
+  .scan { fill:#42f59b; opacity:.10; animation: scan 4s linear infinite; }
+  .pulse { animation:pulse 2.4s ease-in-out infinite; }
+  @keyframes scan { from { transform:translateY(-80px); } to { transform:translateY(380px); } }
+  @keyframes pulse { 0%,100% { opacity:.25; } 50% { opacity:.9; } }
+</style>
+<rect class="bg" width="1200" height="300"/>
+<g>
+  <path class="grid" d="M0 50H1200M0 100H1200M0 150H1200M0 200H1200M0 250H1200"/>
+  <path class="grid" d="M100 0V300M200 0V300M300 0V300M400 0V300M500 0V300M600 0V300M700 0V300M800 0V300M900 0V300M1000 0V300M1100 0V300"/>
+</g>
+<rect class="scan" width="1200" height="70"/>
+<circle class="glow pulse" cx="180" cy="70" r="3"/>
+<circle class="glow pulse" cx="1010" cy="215" r="4"/>
+<circle class="glow pulse" cx="930" cy="65" r="2"/>
+<circle class="glow pulse" cx="280" cy="235" r="3"/>
+<text x="600" y="145" text-anchor="middle" class="title">KIRDEV</text>
+<text x="600" y="200" text-anchor="middle" class="sub">ANDROID • PYTHON • BOTS • LINUX</text>
+<path d="M390 225H810" stroke="#35d07f" stroke-width="2" opacity=".65" class="pulse"/>
+</svg>
