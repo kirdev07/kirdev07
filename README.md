@@ -76,17 +76,6 @@ Telegram-бот для взаимодействия с компьютером и
 
 ---
 
-## 📊 GitHub
-
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=kirdev07&show_icons=true&theme=github_dark&hide_border=true" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kirdev07&layout=compact&theme=github_dark&hide_border=true" />
-
-</div>
-
----
-
 ## 🎯 Сейчас интересно
 
 `Android Development` • `Telegram Bots` • `Python` • `Linux` • `PC Tools` • `Automation` • `AI-assisted Development`
