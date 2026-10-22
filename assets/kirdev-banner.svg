@@ -1,26 +1,44 @@
-<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+<title id="title">KirDev Studio animated monochrome banner</title>
+<desc id="desc">KIRDEV wordmark with softly moving orbit lines, drifting particles, scanning light and KiroX Fusion-inspired monochrome design.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#070707"/><stop offset=".5" stop-color="#151515"/><stop offset="1" stop-color="#050505"/></linearGradient>
+ <linearGradient id="beam" x1="0" x2="1"><stop stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".16"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+ <linearGradient id="text" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#9e9e9e"/></linearGradient>
+ <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#fff" stroke-opacity=".055"/></pattern>
+ <clipPath id="frame"><rect width="1200" height="320" rx="18"/></clipPath>
+</defs>
 <style>
-  .bg { fill:#07110d; }
-  .grid { stroke:#1f6f4a; stroke-width:1; opacity:.22; }
-  .title { fill:#eafff3; font:700 72px monospace; letter-spacing:10px; }
-  .sub { fill:#71d99d; font:24px monospace; letter-spacing:3px; }
-  .glow { fill:#35d07f; opacity:.6; }
-  .scan { fill:#42f59b; opacity:.10; animation: scan 4s linear infinite; }
-  .pulse { animation:pulse 2.4s ease-in-out infinite; }
-  @keyframes scan { from { transform:translateY(-80px); } to { transform:translateY(380px); } }
-  @keyframes pulse { 0%,100% { opacity:.25; } 50% { opacity:.9; } }
+ .orbit{transform-origin:600px 160px;animation:orbit 26s linear infinite}
+ .orbit2{transform-origin:600px 160px;animation:orbit 38s linear infinite reverse}
+ .beam{animation:slide 9s ease-in-out infinite}
+ .dot{animation:blink 3.5s ease-in-out infinite}
+ .word{font-family:Arial,Helvetica,sans-serif;font-weight:900;font-size:93px;letter-spacing:17px;fill:url(#text)}
+ .subtitle{font-family:Arial,Helvetica,sans-serif;font-weight:600;font-size:17px;letter-spacing:6px;fill:#c5c5c5}
+ .small{font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:3px;fill:#8c8c8c}
+ .line{animation:breath 4s ease-in-out infinite}
+ @keyframes orbit{to{transform:rotate(360deg)}}
+ @keyframes slide{0%,100%{transform:translateX(-530px);opacity:0}30%,70%{opacity:1}50%{transform:translateX(530px)}}
+ @keyframes blink{0%,100%{opacity:.15}50%{opacity:1}}
+ @keyframes breath{0%,100%{opacity:.28}50%{opacity:.75}}
+ @media (prefers-reduced-motion:reduce){.orbit,.orbit2,.beam,.dot,.line{animation:none}}
 </style>
-<rect class="bg" width="1200" height="300"/>
-<g>
-  <path class="grid" d="M0 50H1200M0 100H1200M0 150H1200M0 200H1200M0 250H1200"/>
-  <path class="grid" d="M100 0V300M200 0V300M300 0V300M400 0V300M500 0V300M600 0V300M700 0V300M800 0V300M900 0V300M1000 0V300M1100 0V300"/>
+<g clip-path="url(#frame)">
+<rect width="1200" height="320" fill="url(#bg)"/>
+<rect width="1200" height="320" fill="url(#grid)"/>
+<g fill="none" stroke="#fff" stroke-opacity=".12">
+ <ellipse class="orbit" cx="600" cy="160" rx="510" ry="115" transform="rotate(-16 600 160)"/>
+ <ellipse class="orbit2" cx="600" cy="160" rx="485" ry="132" transform="rotate(18 600 160)"/>
+ <circle cx="600" cy="160" r="236" stroke-opacity=".07"/>
 </g>
-<rect class="scan" width="1200" height="70"/>
-<circle class="glow pulse" cx="180" cy="70" r="3"/>
-<circle class="glow pulse" cx="1010" cy="215" r="4"/>
-<circle class="glow pulse" cx="930" cy="65" r="2"/>
-<circle class="glow pulse" cx="280" cy="235" r="3"/>
-<text x="600" y="145" text-anchor="middle" class="title">KIRDEV</text>
-<text x="600" y="200" text-anchor="middle" class="sub">ANDROID • PYTHON • BOTS • LINUX</text>
-<path d="M390 225H810" stroke="#35d07f" stroke-width="2" opacity=".65" class="pulse"/>
+<g fill="#fff"><circle class="dot" cx="110" cy="65" r="2.4"/><circle class="dot" cx="1052" cy="238" r="2.7" style="animation-delay:1.1s"/><circle class="dot" cx="990" cy="64" r="1.8" style="animation-delay:2.2s"/><circle class="dot" cx="225" cy="249" r="2" style="animation-delay:.8s"/></g>
+<rect class="beam" x="480" y="0" width="240" height="320" fill="url(#beam)"/>
+<path d="M46 47h56M46 47v28M1154 47h-56M1154 47v28M46 273h56M46 273v-28M1154 273h-56M1154 273v-28" fill="none" stroke="#eee" stroke-opacity=".34" stroke-width="1.5"/>
+<text x="600" y="152" text-anchor="middle" class="word">KIRDEV</text>
+<path class="line" d="M410 177H790" stroke="#fff" stroke-width="1.5"/>
+<text x="600" y="212" text-anchor="middle" class="subtitle">STUDIO / FUSION</text>
+<text x="600" y="246" text-anchor="middle" class="small">ANDROID  ·  TELEGRAM  ·  WINDOWS  ·  WEB</text>
+<text x="68" y="289" class="small" font-size="10">EST. 2020</text>
+<text x="1130" y="289" text-anchor="end" class="small" font-size="10">CREATE / CUSTOMIZE / RELEASE</text>
+</g>
 </svg>
