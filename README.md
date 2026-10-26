@@ -1,4 +1,4 @@
-<p align="center"><img src="./assets/kirdev07-motion.svg" alt="KIRDEV.07 animated banner" width="100%"></p>
+<p align="center"><img src="./assets/kirdev07-scene-motion.svg" alt="KIRDEV.07 animated banner" width="100%"></p>
 
 # KIRDEV.07
 
